@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,31 +9,33 @@
  </head>
 
     <body class="bg-gray-200">
+
+
     <div class=" min-h-screen w-2/3 mx-auto flex items-center justify-center">
       <div class="bg-red-50 p-8 rounded-[20px] shadow-md flex items-center ">
-        <img
+      <img
           class="w-2/3 "
           src="./assets/images/laptop.jpg"
           alt="hoangpham"
         />
         <div class="w-1/3 ml-8">
-          <h2 class="text-3xl font-semibold mb-4">Đăng nhập </h2>
-          <form >
-          
+          <h2 class="text-3xl font-semibold mb-4">Đăng ký</h2>
+          <form onSubmit={handleSubmit}>
+            
             <div class="mb-4">
               <label
                 htmlFor="username"
                 class="block text-sm font-medium text-gray-700"
               >
-                Số điện thoại
-                
+                Số điện thoại:
+               
               </label>
+           
               <input
                 type="text"
                 id="username"
-                name="username"
-            
-             
+                name="phone"
+              
                 placeholder="Số điện thoại"
                 class="mt-1 p-2 w-full border rounded-md"
               />
@@ -44,26 +45,42 @@
                 htmlFor="password"
                 class="block text-sm font-medium text-gray-700"
               >
-                Mật khẩu:
-              
+                Mật khẩu :
+            
               </label>
+
               <input
                 type="password"
                 id="password"
                 name="password"
-                placeholder="Mật khẩu"
-                
+                placeholder="Password"
                 class="mt-1 p-2 w-full border rounded-md"
               />
             </div>
-            <input type="checkbox" id="rememberMe" name="rememberMe" />
-            <label htmlFor="rememberMe">Nhớ mật khẩu</label>
-            <br />
+            <div class="mb-4">
+              <label
+                htmlFor="password"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Nhập lại mật khẩu:
+              </label>
+
+              <input
+                type="password"
+                id="retypepassword"
+                
+                name="retypepassword"
+                placeholder=" Nhập lại mật khẩu"
+                class="mt-1 p-2 w-full border rounded-md"
+              />
+            </div>
+          
+         
             <button
               type="submit"
               class="flex flex-row bg-red-300 text-white py-2 px-4 rounded-md justify-center mx-auto hover:bg-red-500"
             >
-              Đăng nhập ngay
+              Tạo tài khoản
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -80,19 +97,30 @@
               </svg>
             </button>
             <p>
-              Chưa có tài khoản <a href="./signup">Đăng ký</a>
+              Đã có tài khoản. <a href="./login" >Đăng nhập</a>
             </p>
             
-             
-            </div>
           </form>
-        
-        
-       
-           
         </div>
       </div>
-    </div>
-   
-    </body>
+
+
+<!-- 
+    thoong bao dang ky thanh cong -->
+        <!-- <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            
+            <h2 class="text-2xl font-bold mb-4">Đăng ký thành công!</h2>
+            
+
+            <Link
+              class="flex flex-row bg-orange-300 text-white py-2 px-4 rounded-md justify-center mx-auto w-[250px] hover:bg-orange-500"
+              to={"/login"}
+            >
+              Đăng nhập ngay
+            </Link>
+          </div>
+        </div> -->
+      
+    </div>  </body>
     </html>
